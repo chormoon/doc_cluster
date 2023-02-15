@@ -1,0 +1,35 @@
+[2020-12-14 18:17:45,414]-GLogger.py]-INFO:start read the config info!
+[2020-12-14 18:17:45,414]-GLogger.py]-INFO:start get the document vectors!
+[2020-12-14 18:17:58,769]-GLogger.py]-INFO:start traing model!
+[2020-12-14 18:18:04,285]-GLogger.py]-INFO:save the docvec model in :model/83_d2c.model
+[2020-12-14 18:18:04,520]-GLogger.py]-INFO:mode_path exists:model/83_d2c.model
+[2020-12-14 18:18:09,420]-GLogger.py]-INFO:model acc：0.975
+[2020-12-14 18:32:07,434]-GLogger.py]-INFO:start read the config info!
+[2020-12-14 18:32:07,465]-GLogger.py]-INFO:start get the document vectors!
+[2020-12-14 18:32:17,594]-GLogger.py]-INFO:start traing model!
+[2020-12-14 18:32:23,037]-GLogger.py]-INFO:save the docvec model in :model/83_d2c.model
+[2020-12-14 18:32:23,037]-GLogger.py]-INFO:mode_path exists:model/83_d2c.model
+[2020-12-14 18:32:27,901]-GLogger.py]-INFO:model acc：0.975
+[2020-12-14 18:34:31,495]-GLogger.py]-INFO:start read the config info!
+[2020-12-14 18:34:31,496]-GLogger.py]-INFO:mode_path exists:model/83_d2c.model
+[2020-12-14 18:34:36,721]-GLogger.py]-INFO:model acc：0.975
+[2020-12-14 19:14:12,719]-GLogger.py]-INFO:start read the config info!
+[2020-12-14 19:14:12,733]-GLogger.py]-INFO:start get the document vectors!
+[2020-12-14 19:14:23,902]-GLogger.py]-INFO:start traing model!
+[2020-12-14 19:14:28,930]-GLogger.py]-INFO:save the docvec model in :model/83_d2c.model
+[2020-12-14 19:14:28,930]-GLogger.py]-INFO:mode_path exists:model/83_d2c.model
+[2020-12-14 19:14:33,780]-GLogger.py]-INFO:model acc：0.975
+[2020-12-14 22:54:00,961]-GLogger.py]-INFO:start read the config info!
+[2020-12-14 22:54:00,971]-GLogger.py]-INFO:start get the document vectors!
+[2020-12-14 22:54:11,541]-GLogger.py]-INFO:start traing model!
+[2020-12-14 22:54:16,582]-GLogger.py]-INFO:save the docvec model in :model/83_d2c.model
+[2020-12-14 22:54:16,583]-GLogger.py]-INFO:mode_path exists:model/83_d2c.model
+[2020-12-14 22:54:21,713]-GLogger.py]-INFO:model acc：0.975
+[2020-12-14 23:58:19,691]-GLogger.py]-INFO:start read the config info!
+[2020-12-14 23:58:19,692]-GLogger.py]-INFO:processed file:preprocessed_data/processed.txt/1_processed.txt
+[2020-12-14 23:58:19,692]-GLogger.py]-INFO:tagged file:preprocessed_data/tagged.txt/1_tagged.txt
+[2020-12-14 23:58:19,692]-GLogger.py]-INFO:processed_file_path not exists:preprocessed_data/processed.txt/1_processed.txt
+[2020-12-14 23:59:51,804]-GLogger.py]-INFO:start read the config info!
+[2020-12-14 23:59:51,804]-GLogger.py]-INFO:processed file:preprocessed_data/1_processed.txt
+[2020-12-14 23:59:51,804]-GLogger.py]-INFO:tagged file:preprocessed_data/1_tagged.txt
+[2020-12-14 23:59:51,804]-GLogger.py]-INFO:processed_file_path not exists:preprocessed_data/1_processed.txt

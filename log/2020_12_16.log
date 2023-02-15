@@ -1,0 +1,4 @@
+[2020-12-16 10:32:02,338]-GLogger.py]-INFO:start read the config info!
+[2020-12-16 10:32:02,338]-GLogger.py]-INFO:processed file:preprocessed_data/100_processed.txt
+[2020-12-16 10:32:02,339]-GLogger.py]-INFO:tagged file:preprocessed_data/100_tagged.txt
+[2020-12-16 10:32:02,339]-GLogger.py]-INFO:start get the document vectors!
