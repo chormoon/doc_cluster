@@ -32,7 +32,7 @@ def loadData(file_path):
             index2corpus[index] = line
             index += 1
         text2index = list(index2corpus.keys())
-    print('docs total size:{}'.format(len(text2index)))
+    # print('docs total size:{}'.format(len(text2index)))
     return Data,index2corpus
 
 def getData(file_path):
@@ -42,7 +42,7 @@ def getData(file_path):
         for line in f:
             Data.append(str(line.strip()))
             file_len += 1
-    print(f'file line:{file_len}')
+    # print(f'file line:{file_len}')
     return Data,file_len
 
 
@@ -66,7 +66,7 @@ def get_train_vector(train_type,cluster_id,train_path,similarity):
     tagged_file_path = os.path.join(conf.tagged_file_path, tagged_file_name)
     log.info('processed file:'+processed_file_path)
     log.info('tagged file:'+tagged_file_path)
-    tagged_file
+
     if(train_type == 1):
         #生成训练数据
         log.info('start get the document vectors!')
@@ -116,8 +116,13 @@ def get_train_vector(train_type,cluster_id,train_path,similarity):
     corpus, index2corpus= loadData(tagged_file_path)
 
     single_cluster = SingelPassCluster()
-    # 用单聚类策略分出队应的类和文本
+    '''用单聚类策略分出队应的类和文本
     clusters,cluster_text = single_cluster.doc2vec_single_pass(doc2vec,corpus,similarity)
+    '''
+    '''Kmeans '''
+    clusters,cluster_text = single_cluster.kmeans(doc2vec,corpus,6)
+    print(clusters,cluster_text)
+
 
     print("............................................................................................")
     print("得到的类数量有: {} 个 ".format(len(clusters)))
@@ -157,4 +162,4 @@ def get_train_vector(train_type,cluster_id,train_path,similarity):
 
 if __name__ == "__main__":
     # 1为训练模式  0为单纯分类不训练模型
-    get_train_vector(1,75,"E:/Work/BWD/DAY1/doc_cluster/data",0.6)
+    get_train_vector(1,90,"E:/Work/BWD/DAY1/doc_cluster/data",0.6)
