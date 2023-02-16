@@ -15,9 +15,12 @@ import read_config
 import GLogger
 import os
 import csv
+import random
+import pandas as pd
 
 conf = read_config.loadConf()
 log=GLogger.Log(conf.log_file_path)
+
 
 class SingelPassCluster(object):
      def get_max_similarity(self, cluster_cores, vector):
@@ -77,23 +80,9 @@ class SingelPassCluster(object):
          #print("clust:",cluster_text)
          return clusters, cluster_text
 
-     def kmeans(doc2vec,corpus,k):
-         # 随机取质心
-         centroids = random.sample(doc2vec, k)
-         # 更新质心 直到变化量全为0
-         changed, newCentroids = classify(doc2vec, centroids, k)
-         while np.any(changed != 0):
-             changed, newCentroids = classify(doc2vec, newCentroids, k)
-         centroids = sorted(newCentroids.tolist())  # tolist()将矩阵转换成列表 sorted()排序
-         cluster = []
-         for vector,text in zip(corpus_vec,corpus):
-             clalist = calcDis(vector, centroids, k)  # 调用欧拉距离
-             minDistIndices = np.argmin(clalist, axis=1)
-             for i in range(k):
-                 cluster.append([])
-             for i, j in enumerate(minDistIndices):  # enymerate()可同时遍历索引和遍历元素
-                 cluster[j].append(text)
-         return centroids, cluster
+
+
+
 
 
     

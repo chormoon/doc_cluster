@@ -6,6 +6,7 @@ Created on Wed Dec  9 13:07:20 2020
 """
 import data_process
 import numpy as np
+import pandas as pd
 import sys
 from sklearn.metrics.pairwise import cosine_similarity
 import collections
@@ -16,6 +17,7 @@ import os
 import csv
 from singlepass import SingelPassCluster
 from getkeyword import getKeywords_tfidf
+from sklearn.cluster import KMeans
 import joblib
 
 conf = read_config.loadConf()
@@ -47,7 +49,7 @@ def getData(file_path):
 
 
 #训练&评估&生成文档向量
-def get_train_vector(train_type,cluster_id,train_path,similarity):
+def get_train_vector(train_type,cluster_id,train_path,k_num):
     """
     训练&评估&生成文档向量
     :param content: 文本向量模型的路径
@@ -110,26 +112,37 @@ def get_train_vector(train_type,cluster_id,train_path,similarity):
     #获取doc vector
     #这里使用模型将输入文本都变成向量
     doc2vec = data_process.get_vector(model_path)
-    
+
    
     #加载想要区分的文件的语料库以及对应指针
     corpus, index2corpus= loadData(tagged_file_path)
 
-    single_cluster = SingelPassCluster()
+    #single_cluster = SingelPassCluster()
     '''用单聚类策略分出队应的类和文本
     clusters,cluster_text = single_cluster.doc2vec_single_pass(doc2vec,corpus,similarity)
     '''
     '''Kmeans '''
-    clusters,cluster_text = single_cluster.kmeans(doc2vec,corpus,6)
-    print(clusters,cluster_text)
+
+    n_clusters = 6
+    # 建立模型。n_clusters参数用来设置分类个数，即K值，这里表示将样本分为6类。
+    cluster = KMeans(n_clusters=n_clusters, random_state=0,algorithm='auto',max_iter = 200).fit(doc2vec)
+    y_pred = cluster.labels_
+    print(y_pred)
+    quantity = pd.Series(y_pred).value_counts()
+    print(f"cluster聚类数量：\n{quantity}")
+    for i in range(n_clusters):
+        print(f'第{i}类：')
+        for j in range(len(corpus)):
+            if y_pred[j] == i:
+                print ("     "+corpus[j])
 
 
-    print("............................................................................................")
+    '''print("............................................................................................")
     print("得到的类数量有: {} 个 ".format(len(clusters)))
-    print("............................................................................................\n")
+    print("............................................................................................\n")'''
 
     #保存cluster result
-    result_file = str(cluster_id)+'_'+"cluster.csv"
+    '''result_file = str(cluster_id)+'_'+"cluster.csv"
     result_file = os.path.join(conf.result_dir, result_file)
     keyList = cluster_text.keys()
     
@@ -148,13 +161,13 @@ def get_train_vector(train_type,cluster_id,train_path,similarity):
         writer = csv.writer(f)
         for row in rows:
             writer.writerow(row)
-            
+    '''
     #生成doc 的 关键词
     key_file = str(cluster_id)+'_'+"keys.csv"
     key_file = os.path.join(conf.result_dir, key_file)
     titleList,file_num = getData(tagged_file_path)
     corpus, corpus_num = getData(processed_file_path)
-    topK = 500
+    topK = 10
     result = getKeywords_tfidf(corpus,titleList,topK)
     result.to_csv(key_file,index=False)
     
@@ -162,4 +175,4 @@ def get_train_vector(train_type,cluster_id,train_path,similarity):
 
 if __name__ == "__main__":
     # 1为训练模式  0为单纯分类不训练模型
-    get_train_vector(1,90,"E:/Work/BWD/DAY1/doc_cluster/data",0.6)
+    get_train_vector(1,90,"E:/Work/BWD/DAY1/doc_cluster/data",6)

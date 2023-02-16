@@ -411,3 +411,284 @@
 [2023-02-15 14:59:27,048]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
 [2023-02-15 14:59:27,048]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
 [2023-02-15 14:59:27,049]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 15:03:58,072]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 15:03:58,073]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 15:03:58,073]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 15:03:58,073]-GLogger.py]-INFO:start get the document vectors!
+[2023-02-15 15:04:05,062]-GLogger.py]-INFO:start traing model!
+[2023-02-15 15:04:06,164]-GLogger.py]-INFO:save the docvec model in :model/90_d2c.model
+[2023-02-15 15:04:08,984]-GLogger.py]-INFO:model acc：0.9615384615384616
+[2023-02-15 15:04:08,985]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 15:04:08,986]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 15:04:08,986]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 15:05:55,452]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 15:05:55,452]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 15:05:55,453]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 15:05:55,453]-GLogger.py]-INFO:start get the document vectors!
+[2023-02-15 15:06:02,398]-GLogger.py]-INFO:start traing model!
+[2023-02-15 15:06:03,491]-GLogger.py]-INFO:save the docvec model in :model/90_d2c.model
+[2023-02-15 15:06:06,284]-GLogger.py]-INFO:model acc：0.9615384615384616
+[2023-02-15 15:06:06,285]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 15:06:06,285]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 15:06:06,285]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 15:06:30,446]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 15:06:30,446]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 15:06:30,446]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 15:06:30,447]-GLogger.py]-INFO:start get the document vectors!
+[2023-02-15 15:06:37,478]-GLogger.py]-INFO:start traing model!
+[2023-02-15 15:06:38,572]-GLogger.py]-INFO:save the docvec model in :model/90_d2c.model
+[2023-02-15 15:06:41,505]-GLogger.py]-INFO:model acc：0.9615384615384616
+[2023-02-15 15:06:41,506]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 15:06:41,507]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 15:06:41,507]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 15:10:04,268]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 15:10:04,269]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 15:10:04,269]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 15:10:04,269]-GLogger.py]-INFO:start get the document vectors!
+[2023-02-15 15:10:11,790]-GLogger.py]-INFO:start traing model!
+[2023-02-15 15:10:13,035]-GLogger.py]-INFO:save the docvec model in :model/90_d2c.model
+[2023-02-15 15:10:16,228]-GLogger.py]-INFO:model acc：0.9615384615384616
+[2023-02-15 15:10:16,229]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 15:10:16,229]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 15:10:16,230]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 15:10:42,377]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 15:10:42,377]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 15:10:42,377]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 15:10:42,378]-GLogger.py]-INFO:start get the document vectors!
+[2023-02-15 15:10:49,455]-GLogger.py]-INFO:start traing model!
+[2023-02-15 15:10:50,542]-GLogger.py]-INFO:save the docvec model in :model/90_d2c.model
+[2023-02-15 15:10:53,437]-GLogger.py]-INFO:model acc：0.9615384615384616
+[2023-02-15 15:10:53,438]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 15:10:53,439]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 15:10:53,439]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 15:11:25,774]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 15:11:25,775]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 15:11:25,775]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 15:11:25,775]-GLogger.py]-INFO:start get the document vectors!
+[2023-02-15 15:11:32,836]-GLogger.py]-INFO:start traing model!
+[2023-02-15 15:11:33,926]-GLogger.py]-INFO:save the docvec model in :model/90_d2c.model
+[2023-02-15 15:11:36,783]-GLogger.py]-INFO:model acc：0.9615384615384616
+[2023-02-15 15:11:36,784]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 15:11:36,785]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 15:11:36,785]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 15:12:36,603]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 15:12:36,604]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 15:12:36,604]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 15:12:43,563]-GLogger.py]-INFO:Only classification
+[2023-02-15 15:12:43,563]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 15:12:43,564]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 15:12:43,564]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 15:14:28,244]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 15:14:28,244]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 15:14:28,244]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 15:14:35,231]-GLogger.py]-INFO:Only classification
+[2023-02-15 15:14:35,231]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 15:14:35,232]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 15:14:35,232]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 15:16:12,842]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 15:16:12,842]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 15:16:12,843]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 15:16:19,744]-GLogger.py]-INFO:Only classification
+[2023-02-15 15:16:19,745]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 15:16:19,745]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 15:16:19,746]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 15:17:16,365]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 15:17:16,365]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 15:17:16,366]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 15:17:23,295]-GLogger.py]-INFO:Only classification
+[2023-02-15 15:17:23,296]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 15:17:23,296]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 15:17:23,297]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 15:20:31,130]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 15:20:31,131]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 15:20:31,131]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 15:20:38,064]-GLogger.py]-INFO:Only classification
+[2023-02-15 15:20:38,064]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 15:20:38,065]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 15:20:38,065]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 15:21:54,771]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 15:21:54,771]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 15:21:54,771]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 15:22:01,768]-GLogger.py]-INFO:Only classification
+[2023-02-15 15:22:01,769]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 15:22:01,769]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 15:22:01,769]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 15:30:01,071]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 15:30:01,071]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 15:30:01,072]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 15:30:08,023]-GLogger.py]-INFO:Only classification
+[2023-02-15 15:30:08,024]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 15:30:08,024]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 15:30:08,025]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 15:32:05,668]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 15:32:05,669]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 15:32:05,669]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 15:32:12,794]-GLogger.py]-INFO:Only classification
+[2023-02-15 15:32:12,795]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 15:32:12,795]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 15:32:12,796]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 15:36:34,376]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 15:36:34,377]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 15:36:34,377]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 15:36:41,336]-GLogger.py]-INFO:Only classification
+[2023-02-15 15:36:41,336]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 15:36:41,337]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 15:36:41,337]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 15:49:50,018]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 15:49:50,019]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 15:49:50,019]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 15:49:56,994]-GLogger.py]-INFO:Only classification
+[2023-02-15 15:49:56,995]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 15:49:56,995]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 15:49:56,996]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 15:50:32,586]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 15:50:32,586]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 15:50:32,587]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 15:50:39,580]-GLogger.py]-INFO:Only classification
+[2023-02-15 15:50:39,581]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 15:50:39,581]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 15:50:39,582]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 15:50:59,706]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 15:50:59,706]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 15:50:59,707]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 15:51:06,693]-GLogger.py]-INFO:Only classification
+[2023-02-15 15:51:06,694]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 15:51:06,694]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 15:51:06,694]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 15:54:00,525]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 15:54:00,526]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 15:54:00,526]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 15:54:07,471]-GLogger.py]-INFO:Only classification
+[2023-02-15 15:54:07,472]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 15:54:07,472]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 15:54:07,472]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 15:56:22,362]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 15:56:22,363]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 15:56:22,363]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 15:56:29,425]-GLogger.py]-INFO:Only classification
+[2023-02-15 15:56:29,426]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 15:56:29,426]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 15:56:29,426]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 15:59:54,877]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 15:59:54,877]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 15:59:54,877]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 16:00:02,026]-GLogger.py]-INFO:Only classification
+[2023-02-15 16:00:02,027]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 16:00:02,027]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 16:00:02,027]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 16:00:29,553]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 16:00:29,553]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 16:00:29,554]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 16:00:36,557]-GLogger.py]-INFO:Only classification
+[2023-02-15 16:00:36,558]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 16:00:36,558]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 16:00:36,559]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 16:08:48,503]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 16:08:48,503]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 16:08:48,504]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 16:08:55,461]-GLogger.py]-INFO:Only classification
+[2023-02-15 16:08:55,461]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 16:08:55,462]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 16:08:55,462]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 16:21:06,324]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 16:21:06,324]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 16:21:06,325]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 16:21:13,423]-GLogger.py]-INFO:Only classification
+[2023-02-15 16:21:13,424]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 16:21:13,424]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 16:21:13,424]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 16:21:26,274]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 16:21:26,274]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 16:21:26,274]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 16:21:33,265]-GLogger.py]-INFO:Only classification
+[2023-02-15 16:21:33,266]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 16:21:33,266]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 16:21:33,266]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 16:23:22,560]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 16:23:22,561]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 16:23:22,561]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 16:23:22,561]-GLogger.py]-INFO:start get the document vectors!
+[2023-02-15 16:23:29,550]-GLogger.py]-INFO:start traing model!
+[2023-02-15 16:23:30,670]-GLogger.py]-INFO:save the docvec model in :model/90_d2c.model
+[2023-02-15 16:23:33,513]-GLogger.py]-INFO:model acc：0.9615384615384616
+[2023-02-15 16:23:33,514]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 16:23:33,514]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 16:23:33,515]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 16:25:35,122]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 16:25:35,122]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 16:25:35,123]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 16:25:35,123]-GLogger.py]-INFO:start get the document vectors!
+[2023-02-15 16:25:42,021]-GLogger.py]-INFO:start traing model!
+[2023-02-15 16:25:43,096]-GLogger.py]-INFO:save the docvec model in :model/90_d2c.model
+[2023-02-15 16:25:45,861]-GLogger.py]-INFO:model acc：0.9574468085106383
+[2023-02-15 16:25:45,862]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 16:25:45,862]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 16:25:45,863]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 16:32:00,675]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 16:32:00,676]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 16:32:00,676]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 16:32:00,676]-GLogger.py]-INFO:start get the document vectors!
+[2023-02-15 16:32:20,977]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 16:32:20,978]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 16:32:20,978]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 16:32:20,978]-GLogger.py]-INFO:start get the document vectors!
+[2023-02-15 16:32:27,949]-GLogger.py]-INFO:start traing model!
+[2023-02-15 16:32:29,023]-GLogger.py]-INFO:save the docvec model in :model/90_d2c.model
+[2023-02-15 16:32:31,786]-GLogger.py]-INFO:model acc：0.9574468085106383
+[2023-02-15 16:32:31,787]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 16:32:31,788]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 16:32:31,788]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 16:33:18,017]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 16:33:18,018]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 16:33:18,018]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 16:33:18,018]-GLogger.py]-INFO:start get the document vectors!
+[2023-02-15 16:33:27,024]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 16:33:27,025]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 16:33:27,025]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 16:33:27,025]-GLogger.py]-INFO:start get the document vectors!
+[2023-02-15 16:33:33,926]-GLogger.py]-INFO:start traing model!
+[2023-02-15 16:33:34,993]-GLogger.py]-INFO:save the docvec model in :model/90_d2c.model
+[2023-02-15 16:33:37,829]-GLogger.py]-INFO:model acc：0.9787234042553191
+[2023-02-15 16:33:37,830]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 16:33:37,830]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 16:33:37,830]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 16:38:58,172]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 16:38:58,173]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 16:38:58,173]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 16:38:58,174]-GLogger.py]-INFO:start get the document vectors!
+[2023-02-15 16:39:05,079]-GLogger.py]-INFO:start traing model!
+[2023-02-15 16:39:06,138]-GLogger.py]-INFO:save the docvec model in :model/90_d2c.model
+[2023-02-15 16:39:08,894]-GLogger.py]-INFO:model acc：0.9574468085106383
+[2023-02-15 16:39:08,895]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 16:39:08,896]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 16:39:08,896]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 16:40:22,962]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 16:40:22,962]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 16:40:22,963]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 16:40:22,963]-GLogger.py]-INFO:start get the document vectors!
+[2023-02-15 16:40:29,922]-GLogger.py]-INFO:start traing model!
+[2023-02-15 16:40:31,008]-GLogger.py]-INFO:save the docvec model in :model/90_d2c.model
+[2023-02-15 16:40:33,788]-GLogger.py]-INFO:model acc：0.9555555555555556
+[2023-02-15 16:40:33,790]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 16:40:33,790]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 16:40:33,790]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 16:40:51,399]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 16:40:51,399]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 16:40:51,399]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 16:40:51,400]-GLogger.py]-INFO:start get the document vectors!
+[2023-02-15 16:40:58,498]-GLogger.py]-INFO:start traing model!
+[2023-02-15 16:40:59,608]-GLogger.py]-INFO:save the docvec model in :model/90_d2c.model
+[2023-02-15 16:41:02,430]-GLogger.py]-INFO:model acc：0.9555555555555556
+[2023-02-15 16:41:02,431]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 16:41:02,432]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 16:41:02,432]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
+[2023-02-15 16:41:18,606]-GLogger.py]-INFO:start read the config info!
+[2023-02-15 16:41:18,607]-GLogger.py]-INFO:processed file:preprocessed_data/90_processed.txt
+[2023-02-15 16:41:18,607]-GLogger.py]-INFO:tagged file:preprocessed_data/90_tagged.txt
+[2023-02-15 16:41:18,607]-GLogger.py]-INFO:start get the document vectors!
+[2023-02-15 16:41:25,472]-GLogger.py]-INFO:start traing model!
+[2023-02-15 16:41:26,561]-GLogger.py]-INFO:save the docvec model in :model/90_d2c.model
+[2023-02-15 16:41:29,510]-GLogger.py]-INFO:model acc：0.9555555555555556
+[2023-02-15 16:41:29,512]-GLogger.py]-INFO:processed_file_path exists:preprocessed_data/90_processed.txt
+[2023-02-15 16:41:29,512]-GLogger.py]-INFO:tagged_file_path exists:preprocessed_data/90_tagged.txt
+[2023-02-15 16:41:29,512]-GLogger.py]-INFO:mode_path exists:model/90_d2c.model
