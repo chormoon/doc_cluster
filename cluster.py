@@ -19,6 +19,7 @@ from singlepass import SingelPassCluster
 from getkeyword import getKeywords_tfidf
 from sklearn.cluster import KMeans
 import joblib
+import torch
 
 conf = read_config.loadConf()
 log=GLogger.Log(conf.log_file_path)
@@ -76,12 +77,15 @@ def get_train_vector(train_type,cluster_id,train_path,k_num):
         #生成训练数据
         log.info('start get the document vectors!')
         documents = get_train_data(train_path,processed_file_path,tagged_file_path)
-        model = None
-        #训练模型
-        log.info('start traing model!')
-        model= Doc2Vec(vector_size=100,epochs=20,alpha=0.06, min_alpha=0.01,min_count = 1,sample=1e-3,negative=5,workers=4,dm=0,window=10)
+        if not os.path.exists(model_path):
 
-        model.build_vocab(documents)
+            model = None
+            #训练模型
+            log.info('start traing model!')
+            model= Doc2Vec(vector_size=100,epochs=20,alpha=0.06, min_alpha=0.01,min_count = 1,sample=1e-3,negative=5,workers=4,dm=0,window=10)
+            model.build_vocab(documents)
+        else:
+            model = torch.load(model_path)
         # model.train(documents, total_examples=model.corpus_count,epochs = model.epochs)
         for epoch in range(2):
         	model.train(documents, total_examples=model.corpus_count, epochs=10)
@@ -89,7 +93,7 @@ def get_train_vector(train_type,cluster_id,train_path,k_num):
         	model.min_alpha = model.alpha
         	model.train(documents, total_examples=model.corpus_count, epochs=10)
 
-        model.save(model_path)
+        torch.save(model, model_path)
         log.info('save the docvec model in :'+model_path)
         #对模型进行评估
         assess_model(model_path, processed_file_path)
@@ -182,4 +186,4 @@ if __name__ == "__main__":
     # 训练数据的地址
     # 分类数据的地址
     # 想要的类的数量
-    get_train_vector(0,90,"E:/Work/BWD/DAY1/doc_cluster/data",14)
+    get_train_vector(1,101,"E:/Work/BWD/DAY1/doc_cluster/data",14)
