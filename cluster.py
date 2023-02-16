@@ -25,7 +25,6 @@ conf = read_config.loadConf()
 log=GLogger.Log(conf.log_file_path)
 log.info('start read the config info!')
 
-
 '''加载数据，返回Data: [xxx.txt ,...] 和 index2corpus: OrderedDict([(0，xxx.txt),(1,xxx.txt),....])'''
 def loadData(file_path):
     Data = []
@@ -39,7 +38,6 @@ def loadData(file_path):
         text2index = list(index2corpus.keys())
     # print('docs total size:{}'.format(len(text2index)))
     return Data,index2corpus
-
 ''' Data: [xxx.txt,...]或者[key key key, key key key,...]  file_len:文件数'''
 def getData(file_path):
     Data = []
@@ -73,7 +71,7 @@ def get_train_vector(train_type,cluster_id,train_path,k_num):
     log.info('processed file:'+processed_file_path)
     log.info('tagged file:'+tagged_file_path)
 
-    if(train_type == 1):
+    if(train_type == 1): #从头训练
         #生成训练数据
         log.info('start get the document vectors!')
         documents = get_train_data(train_path,processed_file_path,tagged_file_path)
@@ -99,7 +97,10 @@ def get_train_vector(train_type,cluster_id,train_path,k_num):
         #对模型进行评估
         assess_model(model_path, processed_file_path)
     else:
+        model = Doc2Vec.load(model_path)
         documents = get_train_data(train_path, processed_file_path, tagged_file_path)
+        tte = model.corpus_count + len(documents)
+        model.train(documents, total_examples=tte, epochs=10)
         log.info('Only classification')
 
     if os.path.exists(processed_file_path):
@@ -118,7 +119,7 @@ def get_train_vector(train_type,cluster_id,train_path,k_num):
         log.info("model path not exists:"+model_path)
         return
     #获取doc vector
-    #这里使用模型将输入文本都变成向量
+    #得到所有的文本向量
     doc2vec = data_process.get_vector(model_path)
 
    
@@ -132,7 +133,7 @@ def get_train_vector(train_type,cluster_id,train_path,k_num):
     '''Kmeans '''
 
     n_clusters = k_num
-    # 建立模型。n_clusters参数用来设置分类个数，即K值，这里表示将样本分为6类。
+    # 建立模型。n_clusters参数用来设置分类个数，即K值，这里表示将样本分为k_num类。
     cluster = KMeans(n_clusters=n_clusters, random_state=0,algorithm='auto',max_iter = 200).fit(doc2vec)
     y_pred = cluster.labels_
     print(y_pred)
@@ -140,8 +141,14 @@ def get_train_vector(train_type,cluster_id,train_path,k_num):
     print(f"cluster聚类数量：\n{quantity}")
     for i in range(n_clusters):
         print(f'第{i}类：')
+        '''
+            这里是创建分类文件夹
+        '''
         for j in range(len(corpus)):
             if y_pred[j] == i:
+                '''
+                    这里是移动文件
+                '''
                 print ("     "+corpus[j])
 
 
