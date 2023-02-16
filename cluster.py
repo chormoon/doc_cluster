@@ -24,6 +24,8 @@ conf = read_config.loadConf()
 log=GLogger.Log(conf.log_file_path)
 log.info('start read the config info!')
 
+
+'''加载数据，返回Data: [xxx.txt ,...] 和 index2corpus: OrderedDict([(0，xxx.txt),(1,xxx.txt),....])'''
 def loadData(file_path):
     Data = []
     index2corpus = collections.OrderedDict()
@@ -37,6 +39,7 @@ def loadData(file_path):
     # print('docs total size:{}'.format(len(text2index)))
     return Data,index2corpus
 
+''' Data: [xxx.txt,...]或者[key key key, key key key,...]  file_len:文件数'''
 def getData(file_path):
     Data = []
     file_len = 0
@@ -114,7 +117,7 @@ def get_train_vector(train_type,cluster_id,train_path,k_num):
     doc2vec = data_process.get_vector(model_path)
 
    
-    #加载想要区分的文件的语料库以及对应指针
+    #加载想要区分的文件的语料库以及对应指针  或者说每个文件的文件名和对应指针
     corpus, index2corpus= loadData(tagged_file_path)
 
     #single_cluster = SingelPassCluster()
@@ -123,7 +126,7 @@ def get_train_vector(train_type,cluster_id,train_path,k_num):
     '''
     '''Kmeans '''
 
-    n_clusters = 6
+    n_clusters = k_num
     # 建立模型。n_clusters参数用来设置分类个数，即K值，这里表示将样本分为6类。
     cluster = KMeans(n_clusters=n_clusters, random_state=0,algorithm='auto',max_iter = 200).fit(doc2vec)
     y_pred = cluster.labels_
@@ -167,7 +170,7 @@ def get_train_vector(train_type,cluster_id,train_path,k_num):
     key_file = os.path.join(conf.result_dir, key_file)
     titleList,file_num = getData(tagged_file_path)
     corpus, corpus_num = getData(processed_file_path)
-    topK = 10
+    topK = 50
     result = getKeywords_tfidf(corpus,titleList,topK)
     result.to_csv(key_file,index=False)
     
@@ -175,4 +178,8 @@ def get_train_vector(train_type,cluster_id,train_path,k_num):
 
 if __name__ == "__main__":
     # 1为训练模式  0为单纯分类不训练模型
-    get_train_vector(1,90,"E:/Work/BWD/DAY1/doc_cluster/data",6)
+    # 分类的ID
+    # 训练数据的地址
+    # 分类数据的地址
+    # 想要的类的数量
+    get_train_vector(0,90,"E:/Work/BWD/DAY1/doc_cluster/data",14)
