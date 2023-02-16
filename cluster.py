@@ -75,33 +75,30 @@ def get_train_vector(train_type,cluster_id,train_path,k_num):
         #生成训练数据
         log.info('start get the document vectors!')
         documents = get_train_data(train_path,processed_file_path,tagged_file_path)
-        if not os.path.exists(model_path):
+        model = None
+        #训练模型
+        log.info('start traing model!')
+        model= Doc2Vec(vector_size=100,epochs=20,alpha=0.06, min_alpha=0.01,min_count = 1,sample=1e-3,negative=5,workers=4,dm=0,window=10)
+        model.build_vocab(documents)
 
-            model = None
-            #训练模型
-            log.info('start traing model!')
-            model= Doc2Vec(vector_size=100,epochs=20,alpha=0.06, min_alpha=0.01,min_count = 1,sample=1e-3,negative=5,workers=4,dm=0,window=10)
-            model.build_vocab(documents)
-        else:
-            print('modle exsit, load and continue train it')
-            model = torch.load(model_path)
-        # model.train(documents, total_examples=model.corpus_count,epochs = model.epochs)
         for epoch in range(2):
         	model.train(documents, total_examples=model.corpus_count, epochs=10)
         	model.alpha -= 0.002
         	model.min_alpha = model.alpha
         	model.train(documents, total_examples=model.corpus_count, epochs=10)
 
-        torch.save(model, model_path)
+        model.save(model_path)
         log.info('save the docvec model in :'+model_path)
         #对模型进行评估
         assess_model(model_path, processed_file_path)
     else:
         model = Doc2Vec.load(model_path)
         documents = get_train_data(train_path, processed_file_path, tagged_file_path)
-        tte = model.corpus_count + len(documents)
-        model.train(documents, total_examples=tte, epochs=10)
-        log.info('Only classification')
+        titleList_,file_len = getData(tagged_file_path)
+        tte = model.corpus_count + file_len
+        model.train(documents, total_examples=tte, epochs=80)
+        log.info('take an increment train')
+        model.save(model_path)
 
     if os.path.exists(processed_file_path):
         log.info("processed_file_path exists:"+processed_file_path)
@@ -133,6 +130,7 @@ def get_train_vector(train_type,cluster_id,train_path,k_num):
     '''Kmeans '''
 
     n_clusters = k_num
+    # K-means方法   无监督学习
     # 建立模型。n_clusters参数用来设置分类个数，即K值，这里表示将样本分为k_num类。
     cluster = KMeans(n_clusters=n_clusters, random_state=0,algorithm='auto',max_iter = 200).fit(doc2vec)
     y_pred = cluster.labels_
@@ -189,9 +187,8 @@ def get_train_vector(train_type,cluster_id,train_path,k_num):
         
 
 if __name__ == "__main__":
-    # 1为训练模式  0为单纯分类不训练模型
-    # 分类的ID
+    # 1为重头训练模式  0为增量训练模式
+    # 分类任务的ID
     # 训练数据的地址
-    # 分类数据的地址
-    # 想要的类的数量
-    get_train_vector(1,101,"E:/Work/BWD/DAY1/doc_cluster/data",14)
+    # 最终想要的类的数量
+    get_train_vector(0,101,"E:/Work/BWD/DAY1/doc_cluster/data",8)

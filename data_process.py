@@ -285,7 +285,7 @@ def assess_model(model_path,processed_file_path):
     f_processed = open(processed_file_path,"r",encoding = 'utf8')
     i = 0
     # model = Doc2Vec.load(model_path)
-    model = torch.load(model_path)
+    model = Doc2Vec.load(model_path)
     for line in f_processed:
         seg = line.strip().split(" ") 
         infer_vec = model.infer_vector(seg,epochs=64)
@@ -355,8 +355,8 @@ def get_vector(model_path):
     :param content: 文本向量模型的路径
     :return: 文本向量矩阵
     """
-    model = torch.load(model_path)
-    #model = Doc2Vec.load(model_path)
+    #model = torch.load(model_path)
+    model = Doc2Vec.load(model_path)
     vecs = [np.array(model.docvecs[i].reshape(1, len(model.docvecs[i]))) for i in range(model.corpus_count)]
     return np.concatenate(vecs)
 
