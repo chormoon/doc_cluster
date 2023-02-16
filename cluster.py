@@ -85,6 +85,7 @@ def get_train_vector(train_type,cluster_id,train_path,k_num):
             model= Doc2Vec(vector_size=100,epochs=20,alpha=0.06, min_alpha=0.01,min_count = 1,sample=1e-3,negative=5,workers=4,dm=0,window=10)
             model.build_vocab(documents)
         else:
+            print('modle exsit, load and continue train it')
             model = torch.load(model_path)
         # model.train(documents, total_examples=model.corpus_count,epochs = model.epochs)
         for epoch in range(2):
