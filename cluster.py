@@ -63,13 +63,21 @@ def get_train_vector(train_type,cluster_id,train_path,cluster_path,k_num):
     "加载模型路径"
     model_name = str(cluster_id)+'_'+"d2c.model"
     model_path = os.path.join(conf.d2v_model_path, model_name)
-    "加载处理后的文件和目标文件路径"
+    "加载处理后的所有训练文件和目标文件路径"
     processed_file_name = str(cluster_id)+'_'+"processed.txt"
     processed_file_path = os.path.join(conf.processed_file_path, processed_file_name)
     tagged_file_name = str(cluster_id)+'_'+"tagged.txt"
     tagged_file_path = os.path.join(conf.tagged_file_path, tagged_file_name)
     log.info('processed file:'+processed_file_path)
     log.info('tagged file:'+tagged_file_path)
+
+    "加载处理后的所有新增分类文件和目标文件路径"
+    processed_file_name_c = str(cluster_id) + '_' + "processed.txt"
+    processed_file_path_c = os.path.join(conf.processed_file_path_c, processed_file_name_c)
+    tagged_file_name_c = str(cluster_id) + '_' + "tagged.txt"
+    tagged_file_path_c = os.path.join(conf.tagged_file_path_c, tagged_file_name_c)
+    log.info('processed_c file:' + processed_file_path_c)
+    log.info('tagged_c file:' + tagged_file_path_c)
 
     if(train_type == 1): #从头训练
         #生成训练数据
@@ -93,8 +101,8 @@ def get_train_vector(train_type,cluster_id,train_path,cluster_path,k_num):
         assess_model(model_path, processed_file_path)
     else:
         model = Doc2Vec.load(model_path)
-        documents = get_train_data(train_path, processed_file_path, tagged_file_path)
-        titleList_,file_len = getData(tagged_file_path)
+        documents = get_train_data(cluster_path, processed_file_path_c, tagged_file_path_c)
+        titleList_,file_len = getData(tagged_file_path_c)
         tte = model.corpus_count + file_len
         model.train(documents, total_examples=tte, epochs=80)
         log.info('take an increment train')
@@ -119,10 +127,12 @@ def get_train_vector(train_type,cluster_id,train_path,cluster_path,k_num):
     #得到所有的文本向量
     doc2vec = data_process.get_vector(model_path)
 
-   
+    if (train_type == 1):  # 从头训练
     #加载想要区分的文件的语料库以及对应指针  或者说每个文件的文件名和对应指针
-    corpus, index2corpus= loadData(tagged_file_path)
+        corpus, index2corpus= loadData(tagged_file_path)
+    else:  #增量训练
 
+        corpus, index2corpus= loadData(tagged_file_path_c)
     #single_cluster = SingelPassCluster()
     '''用单聚类策略分出队应的类和文本
     clusters,cluster_text = single_cluster.doc2vec_single_pass(doc2vec,corpus,similarity)
@@ -152,10 +162,15 @@ def get_train_vector(train_type,cluster_id,train_path,cluster_path,k_num):
         del_file(cluster_dir_path)
         for j in range(len(corpus)):
             if y_pred[j] == i:
-                copy_file_name = train_path + "/"+str(corpus[j])
-                shutil.copy(copy_file_name, cluster_dir_path)
-                print ("     "+corpus[j])
-
+                if(train_type == 1):
+                    copy_file_name = train_path + "/"+str(corpus[j])
+                    shutil.copy(copy_file_name, cluster_dir_path)
+                    print ("     "+corpus[j])
+                else:
+                    copy_file_name = cluster_path + "/" + str(corpus[j])
+                    shutil.copy(copy_file_name, train_path)
+                    shutil.move(copy_file_name, cluster_dir_path)
+                    print("     " + corpus[j])
 
     '''#保存cluster result
     result_file = str(cluster_id)+'_'+"cluster.csv"
@@ -189,9 +204,15 @@ def get_train_vector(train_type,cluster_id,train_path,cluster_path,k_num):
 
 
 if __name__ == "__main__":
-    # 1为重头训练模式  0为增量训练模式
+    # 参数_1：  训练模式
+         # 1为从零训练模式   清零模型  将data文件夹中所有语料文件用于训练并分类
+         # 0为增量训练模式   加载原有模型  将cluster_data文件夹中所有文件进行向量计算与分类
+         # 少量文件新增时选用增量训练  定期从零训练可增加准确率
     # 分类任务的ID
-    # 训练数据的地址
-    # 想要分类的数据的地址
-    # 最终想要的类的数量
-    get_train_vector(0,101,"E:/Work/BWD/DAY1/doc_cluster/data","E:/Work/BWD/DAY1/doc_cluster/cluster_data",4)
+    # 全部训练数据的地址
+    # 新增想要分类的数据的地址
+    # 最终想得到的类的数量
+    get_train_vector(0,101,"E:/Work/BWD/DAY1/doc_cluster/data","E:/Work/BWD/DAY1/doc_cluster/cluster_data",8)
+
+    #使用完成后cluster_data文件夹将自动清空  所有文件分类后需手动检验归档
+    #如果有需要也可以保留cluster_data文件夹中的文件  shutil.move改成shutil.copy即可

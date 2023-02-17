@@ -39,6 +39,8 @@ class SysConf:  # 配置文件对象
         self.train_dir = getValue(cf, 'sys', "train_dir")
         self.processed_file_path = getValue(cf, 'sys', "processed_file_path")
         self.tagged_file_path = getValue(cf, 'sys', "tagged_file_path")
+        self.processed_file_path_c = getValue(cf, 'sys', "processed_file_path_c")
+        self.tagged_file_path_c = getValue(cf, 'sys', "tagged_file_path_c")
         self.log_file_path = getValue(cf, 'sys', "log_file_path")
         self.result_dir = getValue(cf, 'sys', "result_dir")
         self.cluster_dir_path = getValue(cf,'sys',"cluster_dir_path")
