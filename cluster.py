@@ -10,7 +10,7 @@ import pandas as pd
 import sys
 from sklearn.metrics.pairwise import cosine_similarity
 import collections
-from data_process import get_train_data,Doc2Vec,assess_model
+from data_process import get_train_data,Doc2Vec,assess_model,del_file
 import read_config 
 import GLogger
 import os
@@ -20,6 +20,7 @@ from getkeyword import getKeywords_tfidf
 from sklearn.cluster import KMeans
 import joblib
 import torch
+import shutil
 
 conf = read_config.loadConf()
 log=GLogger.Log(conf.log_file_path)
@@ -48,7 +49,6 @@ def getData(file_path):
             file_len += 1
     # print(f'file line:{file_len}')
     return Data,file_len
-
 
 #训练&评估&生成文档向量
 def get_train_vector(train_type,cluster_id,train_path,k_num):
@@ -138,24 +138,23 @@ def get_train_vector(train_type,cluster_id,train_path,k_num):
     quantity = pd.Series(y_pred).value_counts()
     print(f"cluster聚类数量：\n{quantity}")
     for i in range(n_clusters):
+
         print(f'第{i}类：')
-        '''
-            这里是创建分类文件夹
-        '''
+        cluster_dir_name = "class_"+str(i)
+        cluster_dir_path = os.path.join(conf.cluster_dir_path,  cluster_dir_name)
+
+        if not os.path.exists(cluster_dir_path):
+            os.makedirs(cluster_dir_path)
+        del_file(cluster_dir_path)
         for j in range(len(corpus)):
             if y_pred[j] == i:
-                '''
-                    这里是移动文件
-                '''
+                copy_file_name = train_path + "/"+str(corpus[j])
+                shutil.copy(copy_file_name, cluster_dir_path)
                 print ("     "+corpus[j])
 
 
-    '''print("............................................................................................")
-    print("得到的类数量有: {} 个 ".format(len(clusters)))
-    print("............................................................................................\n")'''
-
-    #保存cluster result
-    '''result_file = str(cluster_id)+'_'+"cluster.csv"
+    '''#保存cluster result
+    result_file = str(cluster_id)+'_'+"cluster.csv"
     result_file = os.path.join(conf.result_dir, result_file)
     keyList = cluster_text.keys()
     
@@ -174,7 +173,7 @@ def get_train_vector(train_type,cluster_id,train_path,k_num):
         writer = csv.writer(f)
         for row in rows:
             writer.writerow(row)
-    '''
+    
     #生成doc 的 关键词
     key_file = str(cluster_id)+'_'+"keys.csv"
     key_file = os.path.join(conf.result_dir, key_file)
@@ -183,7 +182,7 @@ def get_train_vector(train_type,cluster_id,train_path,k_num):
     topK = 50
     result = getKeywords_tfidf(corpus,titleList,topK)
     result.to_csv(key_file,index=False)
-    
+    '''
         
 
 if __name__ == "__main__":
@@ -191,4 +190,4 @@ if __name__ == "__main__":
     # 分类任务的ID
     # 训练数据的地址
     # 最终想要的类的数量
-    get_train_vector(0,101,"E:/Work/BWD/DAY1/doc_cluster/data",8)
+    get_train_vector(0,101,"E:/Work/BWD/DAY1/doc_cluster/data",14)
