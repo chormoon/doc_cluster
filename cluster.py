@@ -51,7 +51,7 @@ def getData(file_path):
     return Data,file_len
 
 #训练&评估&生成文档向量
-def get_train_vector(train_type,cluster_id,train_path,k_num):
+def get_train_vector(train_type,cluster_id,train_path,cluster_path,k_num):
     """
     训练&评估&生成文档向量
     :param content: 文本向量模型的路径
@@ -137,6 +137,10 @@ def get_train_vector(train_type,cluster_id,train_path,k_num):
     print(y_pred)
     quantity = pd.Series(y_pred).value_counts()
     print(f"cluster聚类数量：\n{quantity}")
+    shutil.rmtree(conf.cluster_dir_path)
+    print('删除原本分类文件夹成功')
+    os.makedirs(conf.cluster_dir_path)
+    print('重建分类文件夹')
     for i in range(n_clusters):
 
         print(f'第{i}类：')
@@ -166,14 +170,14 @@ def get_train_vector(train_type,cluster_id,train_path,k_num):
             print('     ',i)
             file_list += i + ";"
         valueList.append(file_list)
-        
+  
     rows = zip(keyList, valueList)
 
     with open(result_file, 'w', encoding='utf-8') as f:
         writer = csv.writer(f)
         for row in rows:
             writer.writerow(row)
-    
+    '''
     #生成doc 的 关键词
     key_file = str(cluster_id)+'_'+"keys.csv"
     key_file = os.path.join(conf.result_dir, key_file)
@@ -182,12 +186,12 @@ def get_train_vector(train_type,cluster_id,train_path,k_num):
     topK = 50
     result = getKeywords_tfidf(corpus,titleList,topK)
     result.to_csv(key_file,index=False)
-    '''
-        
+
 
 if __name__ == "__main__":
     # 1为重头训练模式  0为增量训练模式
     # 分类任务的ID
     # 训练数据的地址
+    # 想要分类的数据的地址
     # 最终想要的类的数量
-    get_train_vector(0,101,"E:/Work/BWD/DAY1/doc_cluster/data",14)
+    get_train_vector(0,101,"E:/Work/BWD/DAY1/doc_cluster/data","E:/Work/BWD/DAY1/doc_cluster/cluster_data",4)
