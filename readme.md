@@ -1,3 +1,9 @@
+本项目功能：
+将上传至cluster_data文件夹中的文件进行自动分类
+分类后的文件需要再次手动筛选传入对应文件夹（因为自分类后的文件夹无法定义标签），同时也会自动保存至data文件夹，丰富语料库方便下次重新训练模型。
+
+
+
 只需调用cluster.py即可
 
 get_train_vector(0,101,"E:/Work/BWD/DAY1/doc_cluster/data","E:/Work/BWD/DAY1/doc_cluster/cluster_data",8)
