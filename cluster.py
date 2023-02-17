@@ -193,7 +193,7 @@ def get_train_vector(train_type,cluster_id,train_path,cluster_path,k_num):
         for row in rows:
             writer.writerow(row)
     '''
-    #生成doc 的 关键词
+    #生成doc 的 关键词  以后可以从中挑选stopword来提高准确度
     key_file = str(cluster_id)+'_'+"keys.csv"
     key_file = os.path.join(conf.result_dir, key_file)
     titleList,file_num = getData(tagged_file_path)
